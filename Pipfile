@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 pytest = "~=7.1.2"
+pipenv = "~=2022.8.5"
 Flask = "~=2.2.2"
 
 [dev-packages]
