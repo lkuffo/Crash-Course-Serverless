@@ -1,10 +1,10 @@
 name: Deploy master branch
 
 on:
-  push:
-    branches:
-      - main
-      - pytest
+  workflow_run:
+    workflows: ["Pruebas Unitarias"]
+    types:
+      - completed
 
 jobs:
   deploy:
