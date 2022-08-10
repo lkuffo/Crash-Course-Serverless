@@ -107,3 +107,6 @@ venv
 .venv/
 
 .idea/
+
+package-lock.json
+Pipfile.lock
