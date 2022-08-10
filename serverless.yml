@@ -1,0 +1,19 @@
+service: LandetaLetsGoServerless
+provider:
+  name: aws
+  region: us-east-1
+  role: arn:aws:iam::859647202319:role/LetsGoServerlessLambdaExecution
+  runtime: python3.8
+  timeout: 360
+functions:
+  LandetaSuma:
+    name: LandetaSuma
+    handler: lambda_handler.suma
+    environment:
+      PASSWORD: contrasena-de-algo
+    maximumRetryAttempts: 0
+    description: Funcion que toma dos operandos y devuelve la suma
+package:
+  patterns:
+    - '!node_modules/**'
+    - '!venv/**'
