@@ -1,14 +1,13 @@
-name: Deploy Serverless
+name: Deploy master branch
 
 on:
-  workflow_run:
-    workflows: ["Pruebas Unitarias"]
-    types:
-      - completed
+  push:
+    branches:
+      - main
+      - complete
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: deploy
     runs-on: ubuntu-latest
     strategy:
