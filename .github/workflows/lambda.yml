@@ -36,12 +36,12 @@ jobs:
         path: ~/.local/share/virtualenvs
         key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
 
-#    - run: npm ci
+    - run: npm ci
 
     - name: serverless deploy
       uses: serverless/github-action@v3.1
       with:
-        args: -c "serverless plugin install --name serverless-wsgi && serverless plugin install --name serverless-python-requirements && serverless deploy"
+        args: -c "serverless plugin install --name serverless-wsgi && serverless plugin install --name serverless-python-requirements && serverless deploy --verbose"
         entrypoint: /bin/sh
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
