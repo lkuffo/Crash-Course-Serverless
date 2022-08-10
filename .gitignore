@@ -107,5 +107,3 @@ venv
 .venv/
 
 .idea/
-
-Pipfile.lock
