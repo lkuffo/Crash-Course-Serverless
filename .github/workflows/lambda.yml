@@ -1,4 +1,4 @@
-name: Deploy master branch
+name: Deploy Serverless
 
 on:
   workflow_run:
@@ -8,6 +8,7 @@ on:
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: deploy
     runs-on: ubuntu-latest
     strategy:
