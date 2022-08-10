@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytest = "~=7.1.2"
+Flask = "~=2.2.2"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+test = "pytest"
