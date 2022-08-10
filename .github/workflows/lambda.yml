@@ -36,7 +36,7 @@ jobs:
         path: ~/.local/share/virtualenvs
         key: ${{ runner.os }}-pipenv-${{ hashFiles('**/Pipfile.lock') }}
 
-    - run: npm ci
+#    - run: npm ci
 
     - name: serverless deploy
       uses: serverless/github-action@v3.1
